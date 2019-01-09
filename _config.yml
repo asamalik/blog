@@ -2,9 +2,6 @@ url: https://blog.samalik.com
 title: "Adam's Blog"
 name: 'Adam Samalik'
 locale: "en-GB"
-description: >
-  Open Source, Open Mind, Open Ideas, Open
-  Everything.
 
 plugins:
   - jekyll-paginate
@@ -35,7 +32,6 @@ analytics:
   provider: "google-gtag"
   google:
     tracking_id: "UA-53402824-1"
-    anonymize_ip: false # default
 
 defaults:
   # _posts
