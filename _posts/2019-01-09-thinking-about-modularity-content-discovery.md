@@ -33,17 +33,17 @@ Last metadata expiration check: 0:40:33 ago on Wed 09 Jan 2019 06:55:52 PM UTC.
 nodejs-1:11.1.0-1.module_2379+8d497405.x86_64
 ```
 
-That's because currently it only works with default or enabled module streams. We need to fix that because people rely on this information.
+That's because, currently, it only works with default or enabled module streams. We need to fix that because people rely on this information.
 
 Packagers use repoquery to determine which packages to rebuild after making an update to something. Or we can use it to find out if there is a certain version of a library containing a CVE. And no one wants to go enable modules one by one just to do a simple query.
 
-But is it simple, really?
+But is it that simple, really?
 
 Well, not quite. The repositories don't include all the content. Two classes of data are missing.
 
 First, not every module is shipped. There are a few that are useful only as build dependencies. Some of them are used for bootstrapping for example.
 
-And second is module filters. You can filter certain binary packages out of a module build before you ship it. Again, some of the packages are only useful as build dependencies. But there might be other reasons, too.
+And second, module filters. You can filter certain binary packages out of a module build before you ship it. Again, some of the packages are only useful as build dependencies. But there might be other reasons, too.
 
 So repos are likely out of question because they don't contain all the data we need.
 
