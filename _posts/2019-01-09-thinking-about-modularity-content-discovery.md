@@ -1,9 +1,9 @@
 ---
-title: Thinking about Fedora Modularity content discovery
+title: Thinking about content discovery in Fedora Modularity 
 categories:
   - Fedora
 ---
-# Thinking about Fedora Modularity content discovery
+# Thinking about content discovery in Fedora Modularity
 
 I just had a quick chat with Petr Šabata about content discovery and he had a brilliant idea. But let's first clarify what I mean by content discovery.
 
