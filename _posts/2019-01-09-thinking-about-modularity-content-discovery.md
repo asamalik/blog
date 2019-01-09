@@ -4,7 +4,7 @@ categories:
   - Fedora
 ---
 
-I just had a quick chat with Petr Šabata about content discovery and he had a brilliant idea. But let's first clarify what I mean by content discovery.
+I just had a quick chat with Petr Šabata about content discovery and he might have had a brilliant idea. But let's first clarify what I mean by content discovery.
 
 ```
 $ dnf repoquery --whatprovides /usr/bin/node
