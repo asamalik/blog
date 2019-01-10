@@ -8,38 +8,37 @@ I just had a quick chat with Petr Šabata about content discovery and he might h
 
 ```
 $ dnf repoquery --whatprovides /usr/bin/node
-Last metadata expiration check: 0:35:42 ago on Wed 09 Jan 2019 06:55:52 PM UTC.
 nodejs-1:10.11.0-1.fc29.i686
 nodejs-1:10.11.0-1.fc29.x86_64
 nodejs-1:10.15.0-1.fc29.i686
 nodejs-1:10.15.0-1.fc29.x86_64
 ```
 
-This command is basically asking "What packages provide the `/usr/bin/node` binary in Fedora 29?" But there is something missing...
+This command is basically asking "What packages provide the `/usr/bin/node` binary in Fedora 29?" But there is something missing.
 
 ```
-$ dnf module list | grep nodejs
+$ dnf module list nodejs
 nodejs           8              default, development, minimal, ...              
 nodejs           10             default, development, minimal, ...              
 nodejs           11             default, development, minimal, ...    
 ```
 
-There are three Node.js versions in Fedora 29. But I can't see them in the repoquery output...
+See? There are three Node.js versions in Fedora 29. But why I couldn't see them in the repoquery output?
 
 ```
-$ dnf -y module enable nodejs:11
+$ dnf module enable nodejs:11
 $ dnf repoquery --whatprovides /usr/bin/node
 Last metadata expiration check: 0:40:33 ago on Wed 09 Jan 2019 06:55:52 PM UTC.
 nodejs-1:11.1.0-1.module_2379+8d497405.x86_64
 ```
 
-That's because, currently, it only works with default or enabled module streams. We need to fix that because people rely on this information.
+That's because, currently, repoquery only works with default or enabled module streams. We need to change that so it shows the latest packages from all modules, because people rely on this data.
 
-Packagers use repoquery to determine which packages to rebuild after making an update to something. Or we can use it to find out if there is a certain version of a library containing a CVE. And no one wants to go enable modules one by one just to do a simple query.
+For example, packagers use repoquery to determine which packages to rebuild after making an update to something. Or we can use it to find out if there is a certain version of a library containing a CVE. And no one wants to go enable modules one by one just to do a simple query.
 
 But is it that simple, really?
 
-Well, not quite. The repositories don't include all the content. Two classes of data are missing.
+Well, not quite. The repositories don't include all the data we need. Two classes of data are missing:
 
 First, not every module is shipped. There are a few that are useful only as build dependencies. Some of them are used for bootstrapping for example.
 
