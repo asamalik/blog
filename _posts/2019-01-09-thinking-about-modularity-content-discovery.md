@@ -4,7 +4,13 @@ categories:
   - Fedora
 ---
 
-I just had a quick chat with Petr Šabata about content discovery and he might have had a brilliant idea. But let's first clarify what I mean by content discovery.
+There are few content queries we can't do right now in Modularity. I've collected a few [scenarios regarding content discovery](https://pagure.io/modularity/working-documents/blob/master/f/content-discovery/content-discovery-scenarios.md) that need to be addressed. 
+
+I just had a quick chat with Petr Šabata about content discovery and he might have had a brilliant idea about the actual implementation.
+
+But first, let's see what the actual problem is.
+
+## The problem
 
 ```
 $ dnf repoquery --whatprovides /usr/bin/node
@@ -48,6 +54,8 @@ So repos are likely out of question because they don't contain all the data we n
 
 Why do I care about packages that are not being shipped? Because build dependencies influence the output of a build. A simple example would be a compiler. You don't need to ship the compiler for an application to work, but a bug in that compiler can produce bugs (even security ones) in the application. So I need to care about those as well.
 
+## A potential solution
+
 I thought about several ways of getting that info from other sources, possibly using the fedmod tool in addition to repoquery, but that all seemed a bit complicated and not right. 
 
 And that's where Petr's idea comes in.
@@ -75,4 +83,3 @@ The actual packages and modulemd files are in the massive `/mnt/koji`. The scrip
 This will need a bit of a thought. Likely coming as another post later. :-)
 
 `<half-serious>` Heck, now thinking about it, can we have a database with all of that? With all Fedora releases, packages, modules, package provides, and all their relations? Is that too crazy? `</half-serious>`
-
