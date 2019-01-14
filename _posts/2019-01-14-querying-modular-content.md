@@ -2,7 +2,7 @@
 title: Querying modular content
 ---
 
-Following up after my [recent post about Modularity content discovery]({{ site.baseurl }}{% post_url 2017-09-12-flock-2017-was-awesome %}) with a neat workaround that works now.
+Following up after my [recent post about Modularity content discovery]({{ site.baseurl }}{% 2019-01-09-thinking-about-modularity-content-discovery %}) with a neat workaround that works now.
 
 The problem was: I need to do `dnf repoquery` across all module streams, but the way it currently works is that it only works with the default or enabled modules.
 
