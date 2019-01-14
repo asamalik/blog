@@ -1,4 +1,6 @@
-# Querying modular content
+---
+title: Querying modular content
+---
 
 Following up after my [recent post about Modularity content discovery]({{ site.baseurl }}{% post_url 2017-09-12-flock-2017-was-awesome %}) with a neat workaround that works now.
 
