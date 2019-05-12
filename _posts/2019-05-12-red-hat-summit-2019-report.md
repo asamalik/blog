@@ -2,7 +2,7 @@
 title: Red Hat Summit 2019 -- event report
 ---
 
-[Red Hat Summit](https://www.redhat.com/en/summit/2019) is an anual conference for Red Hat customers, partners, and open source contributors. I was part of the Community Central space, specifically the [Fedora](https://getfedora.org) and [CentOS](https://www.centos.org) booth. 
+[Red Hat Summit](https://www.redhat.com/en/summit/2019) is an annual conference for Red Hat customers, partners, and open source contributors. I was part of the Community Central space, specifically the [Fedora](https://getfedora.org) and [CentOS](https://www.centos.org) booth. 
 
 The main reason I visited Summit was to show people [Fedora Silverblue](https://silverblue.fedoraproject.org) -- a Linux workstation build on top of rpm-ostree focused on container-based workflows. With Silverblue, instead of managing individual packages, your system is an immutable image that's been tested and delivered as a whole. Applications are decoupled from the OS, running in containers and/or [Flatpaks](https://flatpak.org).
 
