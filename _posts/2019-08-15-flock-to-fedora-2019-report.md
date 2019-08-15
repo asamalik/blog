@@ -1,4 +1,6 @@
-# Flock to Fedora 2019 report
+---
+title: Flock to Fedora 2019 report
+---
 
 I loved being at Flock this year!
 
