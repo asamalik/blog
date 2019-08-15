@@ -2,7 +2,7 @@
 title: Flock to Fedora 2019 report
 ---
 
-I loved being at Flock this year!
+I loved being at [Flock](https://flocktofedora.org/) this year!
 
 Flock is an annual Fedora conference for contributors, this year happening in Budapest, Hungary. What I loved about the venue this year was the single hallway space for discussions, and talk being in rooms around that space. It was a very productive and pleasant conference to be at! I've met many people I haven't seen for a while, learned about bunch of stuff, and discussed next steps for various initiatives in Fedora I'm being a part of.
 
